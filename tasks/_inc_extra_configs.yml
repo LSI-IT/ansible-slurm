@@ -4,7 +4,7 @@
   ansible.builtin.template:
     src: "{{ item.template }}"
     dest: "{{ slurm_config_dir }}/{{ item.name }}"
-    mode: 0644
+    mode: '0644'
     backup: true
   loop:
     - name: acct_gather.conf
