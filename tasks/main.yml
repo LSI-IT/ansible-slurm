@@ -41,5 +41,5 @@
   when: "slurm_start_services and ('slurmexechosts' in group_names or 'exec' in slurm_roles)"
 
 - name: Setup cluster on slurmdb
-  include_tasks: slurmdbd_cluster.yml
+  ansible.builtin.include_tasks: slurmdbd_cluster.yml
   when: "slurm_start_services and ('slurmdbdservers' in group_names or 'dbd' in slurm_roles)"
